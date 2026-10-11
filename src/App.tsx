@@ -91,7 +91,10 @@ function Compliance() {
 
 function Process() {
   return <section className="py-20 sm:py-28"><div className="wrap"><Head kicker="How we work" title="A Clear, Structured Approach" sub="From the first conversation to ongoing support, you always know where you stand." />
-    <ol className="relative mx-auto max-w-3xl space-y-10 before:absolute before:inset-y-2 before:left-6 before:w-0.5 before:bg-foam md:before:left-1/2">{process.map(([t, d], i) => <Reveal key={t} delay={i * 70}><li className={`relative pl-20 md:w-1/2 md:pl-0 ${i % 2 ? 'md:ml-auto md:pl-14' : 'md:pr-14 md:text-right'}`}><span className={`absolute top-0 grid h-12 w-12 place-items-center rounded-full bg-ocean font-head font-bold text-white ring-8 ring-sand ${i % 2 ? 'left-0 md:-left-6' : 'left-0 md:left-auto md:-right-6'}`}>{i + 1}</span><h3 className="text-2xl">{t}</h3><p className="mt-2 leading-relaxed">{d}</p></li></Reveal>)}</ol></div></section>
+    <ol className="relative mx-auto max-w-3xl space-y-10 before:absolute before:inset-y-2 before:left-6 before:w-0.5 before:bg-foam md:before:left-1/2 md:before:-ml-px">{process.map(([t, d], i) => <Reveal key={t} delay={i * 70}><li className="grid grid-cols-[3rem_1fr] gap-x-5 md:grid-cols-[1fr_3rem_1fr] md:gap-x-8">
+      <span className="relative z-10 col-start-1 row-start-1 grid h-12 w-12 place-items-center rounded-full bg-ocean font-head font-bold text-white ring-8 ring-sand md:col-start-2">{i + 1}</span>
+      <div className={`col-start-2 row-start-1 ${i % 2 ? 'md:col-start-3' : 'md:col-start-1 md:text-right'}`}><h3 className="text-2xl">{t}</h3><p className="mt-2 leading-relaxed">{d}</p></div>
+    </li></Reveal>)}</ol></div></section>
 }
 
 function Partners() {
