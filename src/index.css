@@ -1,0 +1,21 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { @apply font-sans text-ink/75 bg-sand antialiased; }
+h1, h2, h3, h4 { @apply font-head font-semibold tracking-tight text-ocean; }
+:focus-visible { outline: 3px solid #c8553a; outline-offset: 3px; border-radius: 8px; }
+@layer components {
+  .btn { @apply inline-flex min-h-[50px] items-center justify-center gap-2 rounded-full px-7 py-3 text-[15px] font-bold transition duration-300 hover:-translate-y-0.5; }
+  .btn-c { @apply bg-coral text-white hover:brightness-110; }
+  .btn-o { @apply bg-ocean text-white hover:bg-ocean-700; }
+  .btn-l { @apply border-2 border-white/70 text-white hover:bg-white hover:text-ocean; }
+  .kicker { @apply text-xs font-extrabold uppercase tracking-[.18em] text-coral; }
+  .h2 { @apply mt-3 text-3xl leading-tight sm:text-[2.7rem]; }
+  .wrap { @apply mx-auto max-w-6xl px-5 sm:px-8; }
+}
+.dk h1, .dk h2, .dk h3, .dk h4 { color: #fff; } .dk .kicker { color: #f3b7a5; }
+@keyframes fadeup { from { opacity: 0; transform: translateY(18px) } }
+.fadeup { animation: fadeup .9s ease both; }
+@keyframes sheet { from { transform: translateY(100%) } }
+.sheet { animation: sheet .4s cubic-bezier(.2,.7,.2,1); }
+.noscroll { scrollbar-width: none; } .noscroll::-webkit-scrollbar { display: none; }
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { animation: none !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
