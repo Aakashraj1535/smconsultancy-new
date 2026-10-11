@@ -21,7 +21,25 @@ export function useContactForm(service: string) {
   async function submit(ev: FormEvent) {
     ev.preventDefault(); const e = validate(v); setErr(e); if (Object.keys(e).length) return
     setState('loading')
-    try { await new Promise(r => setTimeout(r, 900)) /* TODO: replace with real API / form service call */; setState('done') } catch { setState('error') }
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          subject: 'New Contact Form Submission – SM Consultancy NZ',
+          from_name: 'SM Consultancy Website',
+          name: v.name,
+          email: v.email,
+          phone: v.phone,
+          business: v.business,
+          service: v.service,
+          message: v.message,
+        }),
+      })
+      const data = await res.json()
+      if (res.ok && data.success) { setState('done'); setV(empty) } else setState('error')
+    } catch { setState('error') }
   }
   return { v, err, state, set, blur, submit }
 }

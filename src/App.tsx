@@ -95,7 +95,7 @@ function Process() {
 }
 
 function Partners() {
-  const p = [['MYOB', 'https://www.smconsultancy.nz/images/myob.png', 'Comprehensive accounting, payroll & compliance solutions.'], ['Xero', 'https://www.smconsultancy.nz/images/Xero_software_logo.svg.png', 'Trusted cloud-based accounting platform for modern businesses.']]
+     const p = [['MYOB', '/images/myob.png', 'Comprehensive accounting, payroll & compliance solutions.'], ['Xero', '/images/xero.png', 'Trusted cloud-based accounting platform for modern businesses.']]
   return <section id="partners" className="bg-white py-20 sm:py-28"><div className="wrap"><Head kicker="Platforms" title="Software Partners" sub="We work with industry-leading platforms trusted by businesses across New Zealand." />
     <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">{p.map(([n, src, d], i) => <Reveal key={n} delay={i * 90}><article className="h-full rounded-[2rem] bg-sand p-10 text-center transition duration-300 hover:-translate-y-1 hover:shadow-soft"><div className="mx-auto flex h-28 w-full max-w-[260px] items-center justify-center rounded-3xl bg-white p-5"><img src={src} alt={`${n} logo`} loading="lazy" className="max-h-full w-auto max-w-full object-contain" /></div><h3 className="mt-6 text-2xl">{n}</h3><p className="mt-2">{d}</p></article></Reveal>)}</div></div></section>
 }
