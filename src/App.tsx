@@ -91,7 +91,7 @@ function Compliance() {
 
 function Process() {
   return <section className="py-20 sm:py-28"><div className="wrap"><Head kicker="How we work" title="A Clear, Structured Approach" sub="From the first conversation to ongoing support, you always know where you stand." />
-    <ol className="relative mx-auto max-w-3xl space-y-10 before:absolute before:inset-y-2 before:left-6 before:w-0.5 before:bg-foam md:before:left-1/2">{process.map(([t, d], i) => <Reveal key={t} delay={i * 70}><li className={`relative pl-20 md:w-1/2 md:pl-0 ${i % 2 ? 'md:ml-auto md:pl-14' : 'md:pr-14 md:text-right'}`}><span className={`absolute left-0 top-0 grid h-12 w-12 place-items-center rounded-full bg-ocean font-head font-bold text-white ring-8 ring-sand md:left-auto ${i % 2 ? 'md:-left-6' : 'md:-right-6'}`}>{i + 1}</span><h3 className="text-2xl">{t}</h3><p className="mt-2 leading-relaxed">{d}</p></li></Reveal>)}</ol></div></section>
+    <ol className="relative mx-auto max-w-3xl space-y-10 before:absolute before:inset-y-2 before:left-6 before:w-0.5 before:bg-foam md:before:left-1/2">{process.map(([t, d], i) => <Reveal key={t} delay={i * 70}><li className={`relative pl-20 md:w-1/2 md:pl-0 ${i % 2 ? 'md:ml-auto md:pl-14' : 'md:pr-14 md:text-right'}`}><span className={`absolute top-0 grid h-12 w-12 place-items-center rounded-full bg-ocean font-head font-bold text-white ring-8 ring-sand ${i % 2 ? 'left-0 md:-left-6' : 'left-0 md:left-auto md:-right-6'}`}>{i + 1}</span><h3 className="text-2xl">{t}</h3><p className="mt-2 leading-relaxed">{d}</p></li></Reveal>)}</ol></div></section>
 }
 
 function Partners() {
