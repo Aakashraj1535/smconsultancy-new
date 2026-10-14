@@ -13,8 +13,7 @@ function Head({ kicker, title, sub, center = true }: { kicker: string; title: st
   return <Reveal className={`mb-12 max-w-2xl ${center ? 'mx-auto text-center' : ''}`}><p className="kicker">{kicker}</p><h2 className="h2">{title}</h2>{sub && <p className="mt-4 text-lg leading-relaxed">{sub}</p>}</Reveal>
 }
 const Arch = ({ name, alt, className = '' }: { name: 'hero' | 'docs' | 'meeting' | 'contract' | 'office'; alt: string; className?: string }) => <div className={`overflow-hidden rounded-t-[999px] rounded-b-3xl ${className}`}><Photo name={name} alt={alt} /></div>
-const Mark = () => <span className="grid h-11 w-11 place-items-center rounded-full bg-coral font-head text-sm font-bold text-white">SM</span>
-
+   const Mark = () => <img src="/images/logo-mark.png" alt="SM Consultancy NZ Limited logo" width={48} height={48} className="h-12 w-12 rounded-full object-cover ring-1 ring-ocean/10" />
 function Header() {
   const scrolled = useScrolled(30), active = useActive(nav.map(n => n.toLowerCase())), [open, setOpen] = useState(false)
   useEffect(() => { const k = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false); addEventListener('keydown', k); return () => removeEventListener('keydown', k) }, [])
