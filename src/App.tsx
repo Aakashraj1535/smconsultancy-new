@@ -28,10 +28,10 @@ function Header() {
 function Hero() {
   return <section id="home" className="relative overflow-hidden pt-32 sm:pt-40"><div className="absolute inset-x-0 top-0 -z-0 h-[70%] bg-gradient-to-b from-foam-2 to-sand" />
     <div className="wrap relative fadeup text-center"><p className="kicker">Trusted • Reliable • Professional</p>
-      <h1 className="mx-auto mt-5 max-w-4xl text-[2.5rem] leading-[1.06] sm:text-6xl">Your Trusted Accounting &amp; Compliance Partner</h1>
+      <h1 className="mx-auto mt-5 max-w-4xl text-[2.5rem] leading-[1.06] sm:text-6xl">Your Trusted Business Accounting &amp; Tax Compliance Partner</h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed">Expert accounting, taxation, payroll, GST/FBT/PAYE, software migration and compliance support tailored for small &amp; medium businesses.</p>
       <div className="mt-9 flex flex-col justify-center gap-3.5 sm:flex-row"><a href="#contact" className="btn btn-c group">Get Started <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></a><a href="#services" className="btn btn-o">Explore Our Services</a></div>
-      <p className="mt-8 text-sm font-bold tracking-wide text-ocean/70">Accounting • Taxation • Payroll • Compliance</p></div>
+      <p className="mt-8 text-sm font-bold tracking-wide text-ocean/70">Bookeeping • Taxation • Payroll • Compliance</p></div>
     <div className="wrap relative mt-14 grid grid-cols-3 items-end gap-3 sm:gap-6"><Arch name="docs" alt="Calculator and financial documents on a desk" className="h-44 sm:h-72" /><Arch name="hero" alt="Laptop displaying business analytics" className="h-56 sm:h-96" /><Arch name="meeting" alt="Professionals collaborating around a table" className="h-44 sm:h-72" /></div>
     <div className="bg-ocean"><div className="wrap flex flex-wrap justify-center gap-x-10 gap-y-3 py-6 text-sm font-bold text-white">{['10+ Professional Services', 'SME-Focused Expertise', 'GST • FBT • PAYE', 'MYOB & Xero', 'New Zealand Compliance'].map(t => <span key={t} className="flex items-center gap-2"><Check className="h-4 w-4 text-foam" />{t}</span>)}</div></div></section>
 }
@@ -46,7 +46,7 @@ function About() {
   return <section id="about" className="bg-white py-20 sm:py-28"><div className="wrap grid items-center gap-14 lg:grid-cols-[.8fr_1.2fr]">
     <Reveal className="mx-auto w-full max-w-sm"><Arch name="contract" alt="Financial documents being reviewed" className="aspect-[3/4] shadow-soft" /></Reveal>
     <Reveal delay={100}><p className="kicker">About us</p><h2 className="h2">About SM Consultancy NZ Limited</h2>
-      <article className="mt-7 space-y-4 text-[17px] leading-[1.75]"><p>SM Consultancy NZ Limited is a trusted accounting and compliance firm dedicated to supporting small and medium-sized businesses across New Zealand.</p>
+      <article className="mt-7 space-y-4 text-[17px] leading-[1.75]"><p>SM Consultancy NZ Limited is a trusted Business accounting and Tax compliance firm dedicated to supporting small and medium-sized businesses across New Zealand.</p>
         <p>We provide accurate, reliable, and timely financial solutions tailored to each client’s unique requirements, ensuring full regulatory compliance and financial clarity.</p>
         <p>Our expertise spans accounting, bookkeeping, taxation, payroll management, GST, FBT, PAYE, and employer compliance services, delivered with professionalism and confidentiality.</p>
         <p>With strong experience in MYOB and Xero cloud-based systems, we help businesses streamline financial processes, enhance reporting accuracy, and improve operational efficiency.</p>
